@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro</title>
+</head>
+<body>
+	<form method="GET">
+		<!-- Este formulario es por GET -->
+		Nombres: <input type="text" name="firstname"><br>
+		Apellidos: <input type="text" name="lastname"><br>
+		Correo: <input type="email" name="email" required><br>
+		Fecha nacimiento: <input type="date" name="birthday"><br>
+		Contraseña: <input type="password" name="password" minlength="5"><br>
+		Género: <br>
+		<input type="radio" name="genero" value="masculino">Masculino<br>
+		<input type="radio" name="genero" value="femenino">Femenino<br>
+		<input type="radio" name="genero" value="otro">Otro<br>
+		Mascotas: <br>
+		<input type="checkbox" name="gato">Gato<br>
+		<input type="checkbox" name="perro">Perro<br>
+		Vehículos: <br>
+		<select>
+			<optgroup label="Personal">
+				<option value="volvo" name="Volvo">Volvo</option>
+				<option value="Wolkswagen" name="Wolkswagen">Wolkswagen</option>
+			</optgroup>
+		</select>
+		<hr>
+		<input type="submit" value="Registrame!">
+		<input type="reset" value="Limpiar">
+	</form>
+
+</body>
+</html>
+
+
+firstname=Kevin+&lastname=Alama+Rodriguez&email=alama_17%40hotmail.com&birthday=2020-08-14&password=123456&genero=femenino&gato=on
