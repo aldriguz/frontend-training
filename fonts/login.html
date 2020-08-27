@@ -3,6 +3,34 @@
 <html>
 <head>
   <title>My first website!</title>
+  <style>
+    p {
+      font-size: 20px;
+      color: red;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    span {
+      font-size: 1cm;
+    }
+
+    .box-model {      
+      border: 2px red solid;
+      display: inline-block;
+      padding-bottom: 10px;    
+    }
+
+    .inside-box {      
+      border: 2px black solid;      
+      margin: 10px 40px 0px 100px;
+    }
+
+    .list {
+      list-style-type: square;
+    }
+
+  </style>
 </head>
 <body>
   <header>
@@ -16,12 +44,24 @@
   </header>
   <section>
     <h2>Login</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    <p>Introduction</p>
+    <p><span>Lorem ipsum dolor</span> sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div class="box-model"><div class="inside-box">A</div></div>
+    <div class="box-model"><div class="inside-box">B</div></div>
+    <div class="box-model"><div class="inside-box">C</div></div>
+
+    <br>
+    <ul>
+      <li class="list">first</li>
+      <li class="list">second</li>
+      <li class="list">third</li>
+    </ul>
   </section>
 </body>
 </html>
