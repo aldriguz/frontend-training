@@ -1,0 +1,122 @@
+/*
+   selector:pseudoclass; {
+     property: value; 
+   }
+
+css selectors
+
+.class
+#id
+* apply for all
+element
+element, elem (both will be selected)
+element elem (elem inside element will be selected)
+element > elem (elem with element parent will be selected)
+element + elem (all elem next to element will be selected)
+:hover
+:last-child
+:first-child
+!important (not recommended)
+
+
+What selectors win out in the cascade depends on:
+-specificity
+-importance
+-source order
+
+A selector's specificity is calculated as follows:
+count the number of ID selectors in the selector (= a)
+count the number of class selectors, attributes selectors, and pseudo-classes in the selector (= b)
+count the number of type selectors and pseudo-elements in the selector (= c)
+ignore the universal selector
+
+*/
+
+* {
+	text-align: right;
+}
+
+body{
+	background-image: url(image-back.jpg);
+	background-size: cover;
+}
+
+
+
+h2, h1 {
+	color: red;
+	text-align: center;
+	border: 5px dashed purple;
+	cursor: pointer;
+}
+
+
+h2 + p {
+	/**color: brown;*/
+	text-align: center;
+	border: 5px dashed purple;
+	cursor: pointer;
+}
+
+
+p {
+	line-height: 20px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+	font-family: 'Russo One', sans-serif;
+}
+
+
+h2 + p:hover {
+	color: white;
+	text-align: center;
+	border: 8px dashed purple;
+	cursor: pointer;
+}
+
+img {
+	float: left;
+
+}
+
+footer {
+	color: white;
+	clear: both;
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+.webtext {
+	border: 3px dashed green;
+	color: black;
+	font-style: bold;
+}
+
+.webtext:last-child {
+	border: 3px dotted blue;	
+}
+
+.webtext:first-child {
+	border: 3px double blue;
+}
+
+.active {
+	color: red;
+}
+
+
+#div1 {
+	background: rgba(0, 0, 255, 0.2);
+}
+
+#div2 {
+	background: rgba(0, 255, 0, 0.2);
+}
+
+
+
