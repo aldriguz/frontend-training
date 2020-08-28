@@ -6,13 +6,18 @@
 
 h1 {
     font-family:  fantasy;
-    font-size: 20px;
+    font-size: 50px;
     border-bottom: 2px solid pink;
     text-align: center;
 }
 
 img {
-    width: 450px;
-    height: 350px;
-    margin-bottom: 10px;
+    width: 300px;
+    height: 280px;
+    margin: 10px;
+    transition: all 1s;
+}
+
+img:hover {
+    transform: scale(1.1);
 }
