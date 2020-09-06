@@ -1,0 +1,23 @@
+html{
+    font-size: 20px;
+}
+
+p {
+    color: crimson;
+    font-size: 2rem;
+}
+
+ol li{
+    color: blue;
+    font-size: 4em;
+}
+
+
+
+.nav-font {
+    font-size: 15px;
+}
+
+.section-ol-font {
+    font-size: 10px;
+}
