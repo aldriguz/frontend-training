@@ -4,6 +4,9 @@ h1 {
 }
 
 .robots {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
 }
 
 .head, 
@@ -24,7 +27,7 @@ h1 {
 } 
 
 .eyes {
-	display: flex;
+	display: flex
 }
 
 .head:hover {
@@ -36,8 +39,6 @@ h1 {
 	width: 300px; 
 	height: 150px;
 	display: flex; 
-	flex-direction: row-reverse;
-	margin: 0 auto;	
 } 
 
 .left_arm, .right_arm { 
@@ -47,18 +48,14 @@ h1 {
 } 
 
 .left_arm { 
-	margin-left: 10px; /* flex row reverse used*/
-	background: red;
+	margin-right: 10px; 
 } 
 
 .right_arm { 
-	margin-right: 10px; 
-	background: red;
+	margin-left: 10px; 
 } 
 
 .torso { 
-	background: white;
-	border: solid 1px red ;
 	width: 200px; 
 	height: 200px;
 	border-radius: 0 0 50px 50px; 
@@ -69,7 +66,7 @@ h1 {
 	height: 200px;
 	/* This is another useful property. Hmm what do you think it does?*/
 	margin: 0 auto;
-	display: flex;
+	display: flex; 
 } 
 
 .left_leg, .right_leg { 
@@ -79,7 +76,7 @@ h1 {
 } 
 
 .left_leg { 
-	margin-left: 45px;
+	margin-left: 45px; 
 } 
 
 .left_leg:hover {
@@ -91,7 +88,7 @@ h1 {
 }
 
 .right_leg { 
-	margin-left: 30px; 	
+	margin-left: 30px; 
 }
 
 .left_eye, .right_eye { 
