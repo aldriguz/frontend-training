@@ -1,7 +1,7 @@
 var button = document.getElementById('enter')
 var input = document.getElementById("user-input");
 var ul = document.querySelector('ul')
-var li = document.querySelector('li');
+var li = document.getElementsByClassName('item-todo');
 
 function inputLength() {
     return input.value.length;
