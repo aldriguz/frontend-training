@@ -1,5 +1,5 @@
 /****
- * IIFE - Inmedialetly Invoice Function Execution
+ * IIFE - Inmedialetly Invoque Function Execution
  * 
  * Script Tags - lack of dependency resolution
  * 
