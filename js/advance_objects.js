@@ -49,3 +49,29 @@ class Wizard extends Player {
 const player1 = new Player("Kevin", "admin");
 const wizard1 = new Wizard("Shawn", "magic");
 
+
+
+//assigning objects
+const paymentData = {
+    currency: 'USD',
+    amount: 358.4,    
+    creditCard: {
+        type: 'VISA',
+        number: '4111 1111 1111 1111',
+        expMont: 08,
+        expYear: 2010,
+        ccv: '0234'
+    }
+};
+let clonePayData = Object.assign({}, paymentData); //assinginig obj to clone as a copy, and not as a reference
+let clonePayDataNew = {...paymentData}; //new syntax
+let objAssigned = Object.assign({}, paymentData, {currency: 'CAD' }); //replace 'USD' to 'CAD' in existing object
+paymentData.currency = 'ASD'; //valid
+paymentData = { monto: 300};//invalid: TypeError: Assignment to constant variable.
+
+paymentData.creditCard.type = 'AMEX';
+
+console.log('original:', paymentData);
+console.log('standard clone:', clonePayData);
+console.log('new syntax clone:', clonePayDataNew);
+console.log('assigning property', objAssigned);
