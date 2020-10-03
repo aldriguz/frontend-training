@@ -8,3 +8,12 @@ if(experience > 90){
 }
 
 console.log('outside', wizardLevel);
+
+
+
+
+//new features
+const valueToUse = 'This is not an object'
+const myValueNotEmpty = undefined || 'Ohh! Empty data';
+
+console.log(myValueNotEmpty);

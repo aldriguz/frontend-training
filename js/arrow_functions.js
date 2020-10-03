@@ -9,3 +9,10 @@ function add(a, b) {
 
 const add2 = (a,b) => a = b;
 
+//arrow function without parentesis parameter
+const noParentesisFunction = singleProperty => {
+    return {
+        insideProperty: singleProperty
+    }
+} 
+console.log(noParentesisFunction('valueString'));
