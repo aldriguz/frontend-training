@@ -88,3 +88,5 @@ Promise.all(urls.map(url => fetch(url)
         console.info('4', sw_array[3])
     })
     .catch(error_msg => console.error('Something failed, check your urls', error_msg));
+
+    //this line is to test git credentials
