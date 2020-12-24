@@ -75,8 +75,11 @@ const urls = [
 
 Promise.all(urls.map(url => fetch(url)
                             .then(sw_people => {
-                                    console.log(sw_people.headers.get("content-type"))
-                                    return sw_people.json()
+                                    //console.log(sw_people.headers.get("content-type"))
+                                    if(sw_people.status !== 200)
+                                        return sw_people.json()
+                                    else                                        
+                                        throw Error //console.log(sw_people.status)  
                                 })))
     .then(sw_array => {
         console.info('1', sw_array[0])
