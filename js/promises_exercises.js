@@ -74,12 +74,12 @@ const urls = [
   ]
 
 Promise.all(urls.map(url => fetch(url)
-                            .then(sw_people => {
-                                    //console.log(sw_people.headers.get("content-type"))
-                                    if(sw_people.status !== 200)
-                                        return sw_people.json()
+                            .then(response => {
+                                    //response object has also details of request
+                                    if(response.status !== 200)
+                                        return response.json()
                                     else                                        
-                                        throw Error //console.log(sw_people.status)  
+                                        throw Error //console.log(response.status)  
                                 })))
     .then(sw_array => {
         console.info('1', sw_array[0])
