@@ -41,10 +41,10 @@ Promise.reject('failed').catch(console.error('Ooops something went wrong'))
 // #5) Use Promise.all to fetch all of these people from Star Wars (SWAPI) at the same time.
 // Console.log the output and make sure it has a catch block as well.
 const urls = [
-  'https://swapi.dev/api/people/1',
-  'http://swapi.dev/api/people/2',
-  'http://swapi.dev/api/people/3',
-  'http://swapi.dev/api/people/4'
+  'https://pokeapi.co/api/v2/type/3',
+  'https://pokeapi.co/api/v2/type/4',
+  'https://pokeapi.co/api/v2/type/5',
+  'https://pokeapi.co/api/v2/type/6'
 ]
 
 Promise.all(urls.map(url => fetch(url).then(sw_people => sw_people.json())))
@@ -57,10 +57,31 @@ Promise.all(urls.map(url => fetch(url).then(sw_people => sw_people.json())))
     .catch(error_msg => console.error('Something failed, check your urls', error_msg));
 
 //error
-fetch('https://swapi.dev/api/people/1')
+fetch('https://pokeapi.co/api/v2/pokemon/ditto')
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(error => console.log(error))
+    .catch(error => console.log(error));
+
 
 // #6) Change one of your urls above to make it incorrect and fail the promise
 // does your catch block handle it?
+
+const urls = [
+    'https://pokeapi.co/api/v2/type/3',
+    'https://pokeapi.co/api/v2/type/4',
+    'https://pokeapi.co/api/v2/type/5',
+    'https://pokeapi.co/api/v/type/6'
+  ]
+
+Promise.all(urls.map(url => fetch(url)
+                            .then(sw_people => {
+                                    console.log(sw_people.headers.get("content-type"))
+                                    return sw_people.json()
+                                })))
+    .then(sw_array => {
+        console.info('1', sw_array[0])
+        console.info('2', sw_array[1])
+        console.info('3', sw_array[2])
+        console.info('4', sw_array[3])
+    })
+    .catch(error_msg => console.error('Something failed, check your urls', error_msg));
