@@ -1,4 +1,4 @@
-# My first script on node
+# My first script on node!
 
 ### Run this command in your terminal (need to place on this folder in terminal)
 
@@ -10,5 +10,5 @@ node log_pokemon.js
 
 ![pokemon console](console_log_pokemon.png "Pokemon")
 
-
+---
 I made this readme reading this [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
