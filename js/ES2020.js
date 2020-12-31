@@ -18,3 +18,11 @@ Promise.all([promiseRight, promiseFail])
 Promise.allSettled([promiseRight, promiseFail])
     .then(values => console.log(values))
     .catch(e => console.error(e));
+
+
+//globalThis is a new alias of the instance, alid outside the browser
+
+window.console.error('Fatal!!') //valid
+globalThis.console.error('Fatal!!') //also valid in browser & node
+global.console.error('Fatal!!') //node valid
+
