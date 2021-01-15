@@ -29,7 +29,7 @@ npm install react react-dom
 ### And also babel preset react 
 
 ```
-npm install --save-dev eslint @babel/core @babel/preset-env @babel/preset-react babel-loader
+npm install --save-dev eslint @babel/core @babel/preset-env @babel/preset-react babel-loader babel-esling
 ```
 
 ## Troubleshooting
