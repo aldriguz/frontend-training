@@ -26,6 +26,8 @@ const Robots = (props) => {
     );
 }
 
+/* Using isomorphic-unfetch - Next < 9.3
+
 Robots.getInitialProps = async function(){
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
@@ -33,5 +35,17 @@ Robots.getInitialProps = async function(){
         robots: data
     }
 }
+
+*/
+
+// This gets called on every request
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
+    const data = await res.json()
+  
+    // Pass data to the page via props
+    return { props: { robots: data } }
+  }
 
 export default Robots;
