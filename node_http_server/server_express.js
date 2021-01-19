@@ -1,4 +1,7 @@
 const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const winston = require('winston');
 
 const app = express();
 
@@ -12,18 +15,27 @@ app.use((req, res, next) => {
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(morgan('combined'));
 
 
 app.get('/profile', (req, res) => {
+    /*
     console.log(req.headers);
     console.log(req.query);
     console.log(req.params);
     console.log(req.body);
+    */
+    res.cookie('session', '1', {httpOnly: true});
+    res.cookie('session', '1', {secure: true});
+    
+    res.set({
+        'Content-Security-Policy': "script-src 'self' 'https://apis.google.com'"        
+    })
 
-    res.status(500).send('profile detected');
+    res.status(200).send('profile detected');
  });
 
-app.post('/profile', (req, res) => {
+app.post('/profile_post', (req, res) => {
    //res.send("hellooo");
    const user = {
         name: 'John',
