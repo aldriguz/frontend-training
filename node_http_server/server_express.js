@@ -1,8 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
-const cors = require('cors');
-const winston = require('winston');
-
+//const cors = require('cors');
+//const winston = require('winston');
+const helmet = require('helmet');
 const app = express();
 
 /*
@@ -16,7 +16,8 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(morgan('combined'));
-
+app.use(helmet());
+//app.use(cors());
 
 app.get('/profile', (req, res) => {
     /*
