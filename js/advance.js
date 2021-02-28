@@ -50,3 +50,9 @@ compose(sum, sum)(5);
 
 //Most important thing
 //Avoiding Side Effects, functional purity => Determinism
+
+
+
+const funct1 = (a, b) => (c, d) => {
+    return console.log('a->', a, ' ', 'b->',b);
+}
