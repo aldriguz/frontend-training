@@ -1,0 +1,12 @@
+<h1>Validador de edad</h1>
+<h3>Tu edad actual es: {{age}}</h3>
+
+<button (click)="increaseAge()">Aumentar</button>
+<button (click)="decreaseAge()">Disminuir</button>
+
+<div *ngIf="age >= 18" style="color:green;">
+    <p><b>Eres mayor de edad</b></p>
+</div>
+<div *ngIf="age < 18" style="color:red;">
+    <p><b>Eres chibolo puplin</b></p>
+</div>
