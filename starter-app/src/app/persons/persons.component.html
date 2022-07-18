@@ -1,0 +1,17 @@
+<p>My list of persons with Interface</p>
+
+<ul>
+    <li *ngFor="let person of filterAdultPersons(persons)">
+        <p>Name: {{person.name}}</p>
+        <p>Age: {{person.age}}</p>
+    </li>
+</ul>
+
+<p>My list of persons with simple array</p>
+
+<ul>
+    <li *ngFor="let person of filterAdultPersons2(persons2)">
+        <p>Name: {{person.name}}</p>
+        <p>Age: {{person.age}}</p>
+    </li>
+</ul>
